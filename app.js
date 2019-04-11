@@ -15,12 +15,18 @@ const indexRoutes = require("./routes/index");
 
 let app = express();
 
-mongoose.connect(
-  "mongodb+srv://greg88:greg88@yelpcampcluster-qegex.mongodb.net/yelp_camp_v12deployed?retryWrites=true",
-  {
-    useNewUrlParser: true
-  }
-);
+console.log(process.env.DATABASEURL);
+
+mongoose.connect("mongodb://localhost:27017/yelp_camp_v12", {
+  useNewUrlParser: true
+});
+// mongoose.connect(
+//   "mongodb+srv://greg88:greg88@yelpcampcluster-qegex.mongodb.net/yelp_camp_v12deployed?retryWrites=true",
+//   {
+//     useNewUrlParser: true
+//   }
+// );
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
