@@ -1,0 +1,12 @@
+.thumbnail img {
+  width: 100%;
+}
+.thumbnail {
+  padding: 0;
+}
+div.caption p {
+  text-align: justify;
+}
+.delete-form {
+  display: inline;
+}
