@@ -18,12 +18,6 @@ let app = express();
 mongoose.connect(process.env.DATABASEURL, {
   useNewUrlParser: true
 });
-// mongoose.connect(
-//   "mongodb+srv://greg88:greg88@yelpcampcluster-qegex.mongodb.net/yelp_camp_v12deployed?retryWrites=true",
-//   {
-//     useNewUrlParser: true
-//   }
-// );
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
