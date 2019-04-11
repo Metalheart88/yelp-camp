@@ -16,7 +16,7 @@ const indexRoutes = require("./routes/index");
 let app = express();
 
 mongoose.connect(
-  "mongodb+srv://greg88:<password>@yelpcampcluster-qegex.mongodb.net/yelp_camp_v12deployed?retryWrites=true",
+  "mongodb+srv://greg88:greg88@yelpcampcluster-qegex.mongodb.net/yelp_camp_v12deployed?retryWrites=true",
   {
     useNewUrlParser: true
   }
