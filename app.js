@@ -15,7 +15,9 @@ const indexRoutes = require("./routes/index");
 
 let app = express();
 
-mongoose.connect(process.env.DATABASEURL, {
+const url =
+  process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp_v12";
+mongoose.connect(url, {
   useNewUrlParser: true
 });
 
